@@ -13,5 +13,6 @@ import com.lixubo.shiro.entity.UserEntity;
 public interface UserService extends IService<UserEntity> {
 
 
+    UserEntity getUserInfoByName(String name);
 }
 
