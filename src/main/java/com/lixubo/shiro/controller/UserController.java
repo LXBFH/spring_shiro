@@ -31,6 +31,7 @@ public class UserController {
         Subject subject = SecurityUtils.getSubject();
         //2.封装请求到token
         AuthenticationToken token = new UsernamePasswordToken(name, phone);
+        System.out.println("token"+token);
         //3.调用login方法进行验证
         try {
             subject.login(token);
@@ -39,7 +40,6 @@ public class UserController {
         } catch (AuthenticationException e) {
             e.printStackTrace();
             System.out.println("登录失败");
-
             return "登录失败";
         }
     }
